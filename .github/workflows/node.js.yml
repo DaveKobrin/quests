@@ -24,6 +24,7 @@ jobs:
     
     - name: change directory to build wandas-wisdom
       run: cd wandas-wisdom
+    - run: ls
     
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
