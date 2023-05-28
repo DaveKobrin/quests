@@ -8,9 +8,11 @@ on:
     branches: [ "tested" ]
   pull_request:
     branches: [ "tested" ]
+    
 defaults:
   run:
     working-directory: ./wandas-wisdom/
+
 jobs:
   build:
 
@@ -30,7 +32,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: './wandas-wisdom'
     
-    - run: npm ci
+    - run: npm i
     
     - run: npm run build --if-present
     
