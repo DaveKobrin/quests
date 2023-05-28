@@ -11,7 +11,7 @@ on:
     
 defaults:
   run:
-    working-directory: ./wandas-wisdom/
+    working-directory: ./wandas-wisdom/session-1/
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './wandas-wisdom'
+        cache-dependency-path: './wandas-wisdom/session-1'
     
     - run: npm i
     
