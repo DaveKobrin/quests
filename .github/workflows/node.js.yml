@@ -25,11 +25,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-#         cache: 'npm'
-#     - run: npm ci
-    - name: list directory
-      run: ls
-    - name: Install dependencies
-      run: npm install
+        cache: 'npm'
+    - name: change directory to build wandas-wisdom
+      run: cd wandas-wisdom
+    - run: npm ci
     - run: npm run build --if-present
     - run: npm test
