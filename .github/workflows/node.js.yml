@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
         cache-dependency-path: './wandas-wisdom'
     
-    - run: npm i
+    - run: npm ci
       working-directory: wandas-wisdom
     - run: npm run build --if-present
       working-directory: wandas-wisdom
