@@ -1,5 +1,13 @@
 {
     "transform": {
         "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": ["./src/**"],
+    "coverageThreshold": {
+        "global": {
+            "lines": 85
+        }
     }
+    
 }
