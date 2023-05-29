@@ -1,6 +1,6 @@
 import checkIfIdentical from "../src/utilities/checkIfIdentical";
 import chooseUniqueQuote from "../src/utilities/chooseUniqueQuote";
-import { mock_quotes } from "../src/data/quotes";
+import { mock_quotes } from "../mockups/mock_quotes"
 import generateRandomNumber from "../src/utilities/generateRandomNumber";
 import makeAllCaps from "../src/utilities/makeAllCaps";
 import selectRandomQuote from "../src/utilities/selectRandomQuote";
@@ -22,6 +22,8 @@ describe("chooseUniqueQuote", () => {
     });
     test("should return a different quote", () => {
         expect(chooseUniqueQuote(mock_quotes[0].text, mock_quotes).text).toBe(mock_quotes[1].text);
+        expect(chooseUniqueQuote(mock_quotes[0].text, mock_quotes).text).toBe(mock_quotes[1].text);
+        expect(chooseUniqueQuote(mock_quotes[1].text, mock_quotes).text).toBe(mock_quotes[0].text);
         expect(chooseUniqueQuote(mock_quotes[1].text, mock_quotes).text).toBe(mock_quotes[0].text);
     });
 });
